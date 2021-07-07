@@ -1,0 +1,12 @@
+[Unit]
+Description=ices
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=rd
+ExecStart=/usr/local/bin/ices /home/rd/radio-etudiante-clg2/code/config/ices.xml
+
+[Install]
+WantedBy=multi-user.target

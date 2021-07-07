@@ -1,0 +1,12 @@
+[Unit]
+Description=icecast service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=rd
+ExecStart=/usr/local/bin/icecast -c /home/rd/radio-etudiante-clg2/code/config/icecast.xml
+
+[Install]
+WantedBy=multi-user.target

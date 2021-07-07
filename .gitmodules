@@ -1,0 +1,3 @@
+[submodule "rivendell-importers"]
+	path = rivendell-importers
+	url = https://github.com/ElvishArtisan/rivendell-importers

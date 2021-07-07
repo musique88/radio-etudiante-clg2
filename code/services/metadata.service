@@ -1,0 +1,12 @@
+[Unit]
+Description=Metadata SigUsr1 to ices
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=rd
+ExecStart=/home/rd/code/scripts/metadatascript.sh
+
+[Install]
+WantedBy=multi-user.target

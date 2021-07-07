@@ -1,0 +1,44 @@
+<ices>
+        <background>0</background>
+        <logpath>/var/log/ices</logpath>
+        <logfile>ices.log</logfile>
+        <logsize>2048</logsize>
+        <loglevel>4</loglevel>
+        <consolelog>0</consolelog>
+        <pidfile>/var/log/ices/ices.pid</pidfile>
+        
+        <stream>
+                <metadata>
+                        <name>Radio Clg2</name>
+                        <genre>Variete</genre>
+                        <description>La radio des etudiantes et des etudiant du College Lionel Groulx</description>
+                        <url>http://mysite.org</url>
+                </metadata>
+                <input>
+                        <module>alsa</module>
+                        <param name="rate">44100</param>
+                        <param name="channels">2</param>
+                        <param name="device">convert</param>
+                        <param name="periods">2</param>
+                        <param name="buffer-time">500</param>
+                        <param name="metadata">1</param>
+                        <param name="metadatafilename">/tmp/rlm_filewrite.txt</param>
+                </input>
+                <instance>
+                        <hostname>localhost</hostname>
+                        <port>8000</port>
+                        <password>hackme</password>
+                        <mount>/stream</mount>
+                        <encode>
+                                <quality>10</quality>
+				<nominal-bitrate>65536</nominal-bitrate>
+                                <maximum-bitrate>131072</maximum-bitrate>
+                                <minimum-bitrate>-1</minimum-bitrate>
+                                <managed>0</managed>
+                                <samplerate>44100</samplerate>
+                                <channels>2</channels>
+                        </encode>
+                </instance>
+        </stream>
+</ices>
+
